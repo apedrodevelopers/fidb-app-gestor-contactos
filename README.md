@@ -1,5 +1,7 @@
 # 📇 Gestor de Contactos — Laboratório Backend (PHP)
 
+![Interface da aplicação](preview.png)
+
 ## 📖 Sobre o projeto
 
 Este repositório contém o **laboratório prático de Backend** da formação **Capacita CFTI — Formação Backend**.
