@@ -71,8 +71,8 @@ Cada linha representa um contacto.
 Exemplo:
 
 1,Jorge Tamba,Tecnico de TI,ENSA,Uige,+244999999999,tamba@gmail.com,Pessoal,jorge.jpg
-2,Maria Silva,Gestora,BAI,Luanda,+244923000000,maria@gmail.com,Trabalho,maria.png
 
+2,Maria Silva,Gestora,BAI,Luanda,+244923000000,maria@gmail.com,Trabalho,maria.png
 
 ---
 
@@ -80,17 +80,15 @@ Exemplo:
 
 As fotos dos contactos devem ser guardadas em:
 
-
 uploads/
 
 Exemplo:
 
-
 uploads/
+
 jorge.jpg
+
 maria.png
-
-
 
 No ficheiro CSV é armazenado apenas **o nome da imagem**.
 
@@ -100,17 +98,17 @@ No ficheiro CSV é armazenado apenas **o nome da imagem**.
 
 Cada contacto possui os seguintes campos:
 
-| Campo | Descrição |
-|------|-----------|
-| id | Identificador único |
-| nome | Nome do contacto |
-| cargo | Cargo ou função |
-| empresa | Empresa |
-| cidade | Cidade |
-| telefone | Número de telefone |
-| email | Email |
-| categoria | Pessoal ou Trabalho |
-| foto | Nome do ficheiro da foto |
+| Campo     | Descrição                |
+| --------- | ------------------------ |
+| id        | Identificador único      |
+| nome      | Nome do contacto         |
+| cargo     | Cargo ou função          |
+| empresa   | Empresa                  |
+| cidade    | Cidade                   |
+| telefone  | Número de telefone       |
+| email     | Email                    |
+| categoria | Pessoal ou Trabalho      |
+| foto      | Nome do ficheiro da foto |
 
 ---
 
@@ -225,7 +223,6 @@ Requisitos:
 ---
 
 # 🧱 Estrutura sugerida do projeto
-
 
 project/
 │
@@ -239,7 +236,6 @@ project/
 │
 └── data/
 └── contactos.csv
-
 
 ---
 
