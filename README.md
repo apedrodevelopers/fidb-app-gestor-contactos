@@ -1,4 +1,4 @@
-# 📇 Gestor de Contactos — Backend Lab (PHP)
+# 📇 Gestor de Contactos — Laboratório Backend (PHP)
 
 ## 📖 Sobre o projeto
 
