@@ -222,8 +222,8 @@ Requisitos:
 
 # 🧱 Estrutura sugerida do projeto
 
+```
 project/
-
 │
 ├── index.php
 ├── adicionar.php
@@ -234,7 +234,8 @@ project/
 ├── uploads/
 │
 └── data/
-└── contactos.csv
+    └── contactos.csv
+```
 
 ---
 
