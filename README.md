@@ -78,9 +78,7 @@ Exemplo:
 
 ## Fotos
 
-As fotos dos contactos devem ser guardadas em:
-
-uploads/
+As fotos dos contactos devem ser guardadas em: uploads/
 
 Exemplo:
 
@@ -225,6 +223,7 @@ Requisitos:
 # 🧱 Estrutura sugerida do projeto
 
 project/
+
 │
 ├── index.php
 ├── adicionar.php
