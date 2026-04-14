@@ -58,9 +58,9 @@ function buscarContactos(string $caminhoBanco): array
             "telefone" => $item[4],
             "cargo" => $item[5],
             "empresa" => $item[6],
-            "categoria" => $item[6],
-            "cidade" => $item[7],
-            "nome_imagem" => $item[8],
+            "categoria" => $item[7],
+            "cidade" => $item[8],
+            "nome_imagem" => $item[9],
         ];
 
         $novoResultadoAssociativo[] = $itemAdicionar;
