@@ -276,7 +276,7 @@
           <a class="modal-close" href="#">✕</a>
         </div>
 
-        <form >
+        <form action="adicionar-contacto.php" method="post" enctype="multipart/form-data" >
 
           <!-- ZONA DE UPLOAD DE FOTO -->
           <div class="photo-upload-zone">
@@ -298,16 +298,22 @@
           </div>
 
           <div class="modal-body">
-            <div class="field"><label>Primeiro Nome *</label><input type="text" name="primeiro_nome" placeholder="Ana" required></div>
-            <div class="field"><label>Apelido *</label><input type="text" name="apelido" placeholder="Silva" required></div>
+            <div class="field">
+              <label>Primeiro Nome *</label>
+              <input type="text" name="primeiro_nome" placeholder="Ana" required>
+            </div>
+            <div class="field">
+              <label>Apelido *</label>
+              <input type="text" name="apelido" placeholder="Silva" required>
+            </div>
             <div class="field"><label>Email</label><input type="email" name="email" placeholder="ana@exemplo.com"></div>
             <div class="field"><label>Telefone</label><input type="tel" name="telefone" placeholder="+244 900 000 000"></div>
             <div class="field"><label>Cargo</label><input type="text" name="cargo" placeholder="Designer"></div>
             <div class="field"><label>Empresa</label><input type="text" name="empresa" placeholder="Empresa Lda."></div>
             <div class="field"><label>Categoria</label>
               <select name="categoria">
-                <option value="work">Trabalho</option>
-                <option value="personal">Pessoal</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Pessoal">Pessoal</option>
               </select>
             </div>
             <div class="field"><label>Cidade</label><input type="text" name="cidade" placeholder="Luanda"></div>
