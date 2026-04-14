@@ -68,3 +68,18 @@ function buscarContactos(string $caminhoBanco): array
 
     return $novoResultadoAssociativo;
 }
+
+function pesquisarContacto(array $contactos, string $filtro): array
+{
+    if ($filtro === "") {
+        return $contactos;
+    }
+
+    $resultado = [];
+    foreach ($contactos as $contacto) {
+        if ($filtro === $contacto["nome"] || $filtro === $contacto["telefone"] || $filtro === $contacto["email"]) {
+            $resultado[] = $contacto;
+        }
+    }
+    return $resultado;
+}

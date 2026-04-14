@@ -5,6 +5,12 @@ $caminhoBanco = "data\contactos.csv";
 
 $contactos = buscarContactos($caminhoBanco);
 
+$filtro = "";
+if (isset($_GET["q"])) {
+  $filtro = $_GET["q"];
+
+  $contactos = pesquisarContacto($contactos, $filtro);
+}
 
 ?>
 
@@ -57,7 +63,7 @@ $contactos = buscarContactos($caminhoBanco);
         <circle cx="11" cy="11" r="8" />
         <line x1="21" y1="21" x2="16.65" y2="16.65" />
       </svg>
-      <input class="search-input" type="text" placeholder="Pesquisar contactos…" value="">
+      <input name="q" class="search-input" type="text" placeholder="Pesquisar contactos…" value="">
     </div>
     <button class="search-btn" type="submit">Pesquisar</button>
     <div class="spacer"></div>
