@@ -5,7 +5,7 @@ function gerarId(): int
     return random_int(99999, 999999999);
 }
 
-function salvarContacto(array $dadosContacto, string $caminhoBanco): void
+function salvarContacto(array $dadosContacto,    string $caminhoBanco): void
 {
 
     $id = $dadosContacto["id"];
@@ -31,10 +31,6 @@ function salvarImagem(string $origemArquivo, string $destinoArquivo): void
 
 function buscarContactos(string $caminhoBanco): array
 {
-    // 815190750;Lucas;da Silva;lucas@gmail.com;999 999 999;Diretor de Marketing;ENSA;Trabalho;Uige;815190750.jpg
-    // 723030187;Pedro;Tamba;pedro@gmail.com;888 888 888;Nenhum;Nenhuma;Pessoal;Luanda;723030187.jpg
-    // 886960971;Ana;Nzuzi;ana@hotmail.com;777 777 777;Gestora de Balcao;Unitel;Trabalho;Bengo;886960971.jpg
-
     $conteudo = file_get_contents($caminhoBanco);
 
     $resultado = explode("\n", $conteudo);
@@ -82,4 +78,32 @@ function pesquisarContacto(array $contactos, string $filtro): array
         }
     }
     return $resultado;
+}
+
+function limparDados(string $caminhoBanco): void
+{
+    file_put_contents($caminhoBanco, "");
+}
+
+function eliminarContacto(int $idContacto, string $caminhoBanco): void
+{
+    // recuperar os contactos existentes
+    // resetamos o banco
+    // filtrar os contactos cujo id seja diferente do que se pretende eliminar
+    // sobreescrever o banco(arquivo) com os dados filtrados
+    $contactosExistentes = buscarContactos($caminhoBanco);
+
+    limparDados($caminhoBanco);
+
+    $resultado = [];
+
+    foreach ($contactosExistentes as $contacto) {
+        if ($contacto["id"] != $idContacto) {
+            $resultado[] = $contacto;
+        }
+    }
+
+    foreach ($resultado as $contacto) {
+        salvarContacto($contacto, $caminhoBanco);
+    }
 }
