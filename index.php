@@ -5,12 +5,28 @@ $caminhoBanco = "data\contactos.csv";
 
 $contactos = buscarContactos($caminhoBanco);
 
+$total = count($contactos);
+$trabalho = 0;
+$pessoal = 0;
+
+foreach ($contactos as $contacto) {
+  if ($contacto["categoria"] === "Trabalho") {
+    $trabalho++;
+  }
+
+  if ($contacto["categoria"] === "Pessoal") {
+    $pessoal++;
+  }
+}
+
 $filtro = "";
 if (isset($_GET["q"])) {
   $filtro = $_GET["q"];
 
   $contactos = pesquisarContacto($contactos, $filtro);
 }
+
+
 
 ?>
 
@@ -42,15 +58,15 @@ if (isset($_GET["q"])) {
     <div class="mast-right">
       <div class="mast-stats">
         <div class="mast-stat">
-          <div class="mast-stat-n">5</div>
+          <div class="mast-stat-n"> <?= $total ?> </div>
           <div class="mast-stat-l">Total</div>
         </div>
         <div class="mast-stat" style="margin-left:4px">
-          <div class="mast-stat-n" style="color:var(--lime)">3</div>
+          <div class="mast-stat-n" style="color:var(--lime)"> <?= $trabalho ?> </div>
           <div class="mast-stat-l">Trabalho</div>
         </div>
         <div class="mast-stat" style="margin-left:4px">
-          <div class="mast-stat-n" style="color:#888">2</div>
+          <div class="mast-stat-n" style="color:#888"> <?= $pessoal ?> </div>
           <div class="mast-stat-l">Pessoal</div>
         </div>
       </div>
